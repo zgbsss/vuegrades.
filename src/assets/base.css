@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas: 
+    "header header"
+    "sidenav content"
+    "footer footer";
+}
+
+#header, #content, #sidenav, #footer {
+  border: 1px solid rgb(6, 159, 247);
+}
+
+#header {
+  grid-area: header;
+}
+#content {
+  grid-area: content;
+  display: flex;
+  flex-wrap: wrap;
+}
+#footer {
+  grid-area: footer;
+}
+#sidenav {
+  grid-area: sidenav;
+}
+
+.block {
+  min-width: 300px;
+  height: 300px;
+  border: 1px solid rgb(40, 128, 91);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+}
